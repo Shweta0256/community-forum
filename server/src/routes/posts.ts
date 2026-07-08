@@ -1,9 +1,9 @@
 import { and, count, desc, eq, inArray, isNull, sql } from "drizzle-orm";
 import { Elysia, t } from "elysia";
-import { HttpError, requireSession, type Session } from "../auth/session";
-import { db } from "../db/client";
-import { enrollments, posts, savedPosts } from "../db/schema";
-import { normalizePagination } from "../lib/pagination";
+import { HttpError, requireSession, type Session } from "../auth/session.js";
+import { db } from "../db/client.js";
+import { enrollments, posts, savedPosts } from "../db/schema.js";
+import { normalizePagination } from "../lib/pagination.js";
 
 async function assertCanReadCourse(session: Session, courseId: string) {
   if (session.role === "moderator") {

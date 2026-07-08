@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { savePost, unsavePost } from "./saved-posts";
+import { savePost, unsavePost } from "./saved-posts.js";
 
 describe("saved posts domain logic", () => {
   it("creates a record when saving for the first time", () => {

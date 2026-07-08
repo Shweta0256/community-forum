@@ -1,11 +1,11 @@
 import { and, count, desc, eq, isNull, sql } from "drizzle-orm";
 import { Elysia, t } from "elysia";
-import { HttpError, requireSession } from "../auth/session";
-import { db } from "../db/client";
-import { posts, savedPosts } from "../db/schema";
-import { savePost, type SaveRecord, unsavePost } from "../domain/saved-posts";
-import { normalizePagination } from "../lib/pagination";
-import { assertPostsReadable } from "./posts";
+import { HttpError, requireSession } from "../auth/session.js";
+import { db } from "../db/client.js";
+import { posts, savedPosts } from "../db/schema.js";
+import { savePost, type SaveRecord, unsavePost } from "../domain/saved-posts.js";
+import { normalizePagination } from "../lib/pagination.js";
+import { assertPostsReadable } from "./posts.js";
 
 function mapSaveRecord(row: typeof savedPosts.$inferSelect): SaveRecord {
   return {

@@ -1,5 +1,5 @@
-import { db, ensureSchema } from "./client";
-import { courses, enrollments, posts, savedPosts, users } from "./schema";
+import { db, ensureSchema } from "./client.js";
+import { courses, enrollments, posts, savedPosts, users } from "./schema.js";
 
 const now = Date.now();
 

@@ -1,7 +1,7 @@
 import { createServer, type IncomingMessage } from "node:http";
 import { Readable } from "node:stream";
-import { app } from "./app";
-import { ensureSchema } from "./db/client";
+import { app } from "./app.js";
+import { ensureSchema } from "./db/client.js";
 
 const port = Number(process.env.PORT ?? 4000);
 

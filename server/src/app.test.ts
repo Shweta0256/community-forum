@@ -1,8 +1,8 @@
 import { eq } from "drizzle-orm";
 import { beforeEach, describe, expect, it } from "vitest";
-import { db, ensureSchema } from "./db/client";
-import { courses, enrollments, posts, savedPosts, users } from "./db/schema";
-import { app } from "./app";
+import { db, ensureSchema } from "./db/client.js";
+import { courses, enrollments, posts, savedPosts, users } from "./db/schema.js";
+import { app } from "./app.js";
 
 function seedTestData() {
   ensureSchema();

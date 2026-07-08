@@ -1,7 +1,7 @@
 import { Elysia } from "elysia";
-import { HttpError } from "./auth/session";
-import { postsRoutes } from "./routes/posts";
-import { savedPostsRoutes } from "./routes/saved-posts";
+import { HttpError } from "./auth/session.js";
+import { postsRoutes } from "./routes/posts.js";
+import { savedPostsRoutes } from "./routes/saved-posts.js";
 
 export const app = new Elysia()
   .onError(({ code, error, set }) => {
