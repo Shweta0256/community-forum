@@ -4,9 +4,10 @@ import { app } from "./app.js";
 import { ensureSchema } from "./db/client.js";
 
 const port = Number(process.env.PORT ?? 4000);
+const corsOrigin = process.env.CORS_ORIGIN ?? "http://localhost:3001";
 
 function applyCorsHeaders(res: import("node:http").ServerResponse) {
-  res.setHeader("access-control-allow-origin", "http://localhost:3001");
+  res.setHeader("access-control-allow-origin", corsOrigin);
   res.setHeader("access-control-allow-methods", "GET,POST,DELETE,OPTIONS");
   res.setHeader("access-control-allow-headers", "content-type,x-user-id,x-role,x-locale");
 }
